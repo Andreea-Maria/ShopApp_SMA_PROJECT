@@ -12,20 +12,23 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.shopapp.ui.theme.ShopAppTheme
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            ShopAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+            setContentView(R.layout.activity_intro)
+
+            // Launch Intro_Activity
+            val intent = Intent(this, Intro_Activity::class.java)
+            startActivity(intent)
+
+            // Optionally finish MainActivity so the user can't navigate back to it
+            finish()
         }
     }
 }

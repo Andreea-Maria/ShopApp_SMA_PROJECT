@@ -10,5 +10,6 @@
     <color name="rose">#ef765c</color>
     <color name="light_grey">#a6a3a3</color>
     <color name="light_rose">#dea6a6</color>
+    <color name="dark_grey">#7f7676</color>
 
 </resources>

@@ -9,7 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.shopapp.databinding.ActivityIntroBinding
 
 class Intro_Activity : AppCompatActivity() {
-    private var binding:ActivityIntroBinding
+    private lateinit var binding:ActivityIntroBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityIntroBinding.inflate(layoutInflater)
