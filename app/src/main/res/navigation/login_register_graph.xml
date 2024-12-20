@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_register_graph"
+    app:startDestination="@id/loginFragment">
+
+
+    <fragment
+        android:id="@+id/AccountOptionsFragment"
+        android:name="com.example.shopapp.fragments.AccountOptionsFragmentFragment"
+        android:label="AccountOptions"
+        tools:layout="@layout/account_options_fragment">
+        <action
+            android:id="@+id/action_AccountOptionsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.shopapp.fragments.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.shopapp.fragments.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/introductionFragment"
+        android:name="com.example.shopapp.fragments.IntroductionFragment"
+        android:label="IntroductionFragment"
+        tools:layout="@layout/activity_login_register">
+        <action
+            android:id="@+id/action_introductionFragment_to_AccountOptionsFragment"
+            app:destination="@id/AccountOptionsFragment" />
+    </fragment>
+</navigation>
